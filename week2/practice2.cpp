@@ -18,7 +18,7 @@ for(j=2; j <= (value/j); j++)
 
 if(!(value%j)) break;
 
-if(j > (value/j)) { 
+if(j > (value/j) && value > 1) { 
 
 cout << value << " is PRIME\n";
 
