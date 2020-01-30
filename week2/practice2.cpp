@@ -6,7 +6,7 @@ int main()
 {
     int j, value;
     cout << "*****TO STOP EXECUTING THE PROGRAM, ENTER 0*****" << endl;
-    cout << "Please enter a positive integer: " << endl;
+    cout << "Please enter an integer: " << endl;
         
     cin >> value;
     
@@ -20,9 +20,9 @@ if(!(value%j)) break;
 
 if(j > (value/j)) { 
 
-cout << value << " is prime\n";
+cout << value << " is PRIME\n";
 
-cout << "Please enter a positive integer: " << endl;
+cout << "Please enter an integer: " << endl;
         
     cin >> value;
            
@@ -30,9 +30,9 @@ cout << "Please enter a positive integer: " << endl;
 
 else { 
 
-cout << value << " is not prime\n";
+cout << value << " is NOT prime\n";
 
-cout << "Please enter a positive integer: " << endl;
+cout << "Please enter an integer: " << endl;
         
     cin >> value;
          
