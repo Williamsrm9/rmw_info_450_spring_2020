@@ -2,63 +2,42 @@
 #include <cmath>
 using namespace std;
 
-int main(){
-    
-    
-    int value;
+int main()
+{
+    int j, value;
     cout << "*****TO STOP EXECUTING THE PROGRAM, ENTER 0*****" << endl;
     cout << "Please enter a positive integer: " << endl;
         
     cin >> value;
     
-    while(value != 0) {
-        
-        for(int i = 2; i <= value / 2 || value == 1 || value == 2 || value == 3;){
-            
-   
-                 if( value == 2){
-           
-           
-                   cout<<value<<" is a PRIME number" << endl;
-
-    cout << "Please enter a positive integer: " << endl;
-        
-    cin >> value;
-           
-       }
-         
-        
-        
-       else if(value == 1 || value % i == 0 && value / 9 == 1 ) {
-           
-           cout<<value<<" is NOT a prime number" << endl;
-           
-               cout << "Please enter a positive integer: " << endl;
-        
-    cin >> value;
-         
-       }
-       
-       
-
-       
-       else {
-           
-           cout<<value<<" is a PRIME number" << endl;
-
-    cout << "Please enter a positive integer: " << endl;
-        
-    cin >> value;
-
-       }
-       
-       
-       
-        
-   
     
-}
+     while(value != 0) {
+    
 
-}
+for(j=2; j <= (value/j); j++)
+
+if(!(value%j)) break;
+
+if(j > (value/j)) { 
+
+cout << value << " is prime\n";
+
+cout << "Please enter a positive integer: " << endl;
+        
+    cin >> value;
+           
+       }
+
+else { 
+
+cout << value << " is not prime\n";
+
+cout << "Please enter a positive integer: " << endl;
+        
+    cin >> value;
+         
+       }
+       
+     }
 
 }
