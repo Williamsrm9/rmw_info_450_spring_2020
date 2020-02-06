@@ -14,8 +14,7 @@ int main ()
     
     cin >> radius;
     
-    
-    cout << "The circumference of the circle is: " << calculateCircumference << endl;
+    cout << "The circumference of the circle is: " << calculateCircumference(radius) << endl;
     
     return 0;
     
@@ -23,7 +22,7 @@ int main ()
 
 double calculateCircumference(double radius)
 {
-    int i;
+    double i;
     
-    i = (radius * 2 * PI);
+   i = 2 * radius * PI;
 }
