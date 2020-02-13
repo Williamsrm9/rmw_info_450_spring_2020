@@ -2,31 +2,21 @@
 #include <cstdio>
 using namespace std;
 
-int main() {
-        
-
-    char name[30][80];
+int main()
+{
+    int t, i;
+    char text [30][80];
     
-    void enter()
-    {
-        int i;
-        char temp[80];
+    for (t=0; t<30; t++) {
+        cout <<"Please enter student for index " << t << ": ";
+        gets(text[t]);
+        if(!text[t][0]) break;
         
-        for (i=0; i < 30; i++) {
-            
-            cout << "Please enter student for index " << i << ": ";
-            cin >> name[i];
-            
-        }
     }
-            
-            void report()
-            {
-                int i;
-                
-                for (i=0; i < 30; i++) {
-                    cout << "students[" << i << "] = " << name[i];
-                }
-            }
-    }
-        
+    
+    for(i=0; i<t; i++)
+    cout << "students [" << i << "] = " << text[i] << '\n';
+    
+    return 0;
+}
+
