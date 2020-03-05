@@ -24,7 +24,6 @@ string reverse(string *s1)
     for(int i=(s1->length()-1);i>=0;i--) { 
      
     letval += s1->at(i);
-     
  }
 
 return letval;
