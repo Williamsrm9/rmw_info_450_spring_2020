@@ -13,16 +13,24 @@ int main ()
   cout << "Please enter a string: ";
   getline (cin,phrase);
   
-  reverse(phrase);
+
+  
+cout <<  reverse(&phrase);
   
   return 0;
 }
 
 string reverse(string *s1)
 {
-    for(int i=(strlen(s1)-1);i>=0;i--) { 
+    string letval;
+    
+    for(int i=(s1->length()-1);i>=0;i--) { 
      
-     cout<<s1[i];
+     letval += s1->at(i);
+     
+
  }
+
+return letval;
  
 }
