@@ -8,20 +8,21 @@ string reverse(string *s1);
 
 int main ()
 {
-  string name;
+  string phrase;
 
-  cout << "Please, enter your full name: ";
-  getline (cin,name);
+  cout << "Please enter a string: ";
+  getline (cin,phrase);
   
-  reverse(name);
+  reverse(phrase);
   
-  cout << "Hello, " << name << "!\n";
   return 0;
 }
 
 string reverse(string *s1)
 {
-    for(int i=(strlen(s1)-1);i>=0;i--)
- { cout<<s1[i];
+    for(int i=(strlen(s1)-1);i>=0;i--) { 
+     
+     cout<<s1[i];
  }
+ 
 }
