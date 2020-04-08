@@ -3,26 +3,40 @@ using namespace std;
 const int PI = 3; // for simplicity, we'll pretend PI is 3
 class shape{
   public:
-    int get_perimeter_length(){ return -1; }
-    int get_area(){             return -1; }
+    virtual int get_perimeter_length() = 0;
+    virtual int get_area() = 0;
+    
+
+
 };
 class circle : public shape{
+  
+  int radius;
+  
   public:
-    circle(int radius){ }
-    int get_perimeter_length(){ return -1; }
-    int get_area(){             return -1; }
+    
+    circle( int radius ) : radius(radius) {}
+    int get_perimeter_length() { return 2 * 3.14159265358979323846 * radius; }
+    int get_area() { return 3.14159265358979323846 * radius^2;}
 };
 class rectangle : public shape{
+  
+  int height;
+  int width;
+  
   public:
-    rectangle(int height, int width){ }
-    int get_perimeter_length(){ return -2; }
-    int get_area(){             return -2; }
+    rectangle(int height, int width) : height(height), width(width) {}
+    int get_perimeter_length(){ return 2 * (height + width); }
+    int get_area(){             return height * width; }
 };
 class square : public shape{
+  
+  int side;
+  
   public:
-    square(int side) { }
-    int get_perimeter_length(){ return -3; }
-    int get_area(){             return -3; }
+    square(int side) : side(side) { }
+    int get_perimeter_length(){ return 4 * side; }
+    int get_area(){             return side^2; }
 };
 int main(){
   shape *s1;
