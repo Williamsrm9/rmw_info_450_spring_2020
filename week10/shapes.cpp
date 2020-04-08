@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 const int PI = 3; // for simplicity, we'll pretend PI is 3
 class shape{
@@ -16,8 +17,8 @@ class circle : public shape{
   public:
     
     circle( int radius ) : radius(radius) {}
-    int get_perimeter_length() { return 2 * 3.14159265358979323846 * radius; }
-    int get_area() { return 3.14159265358979323846 * radius^2;}
+    int get_perimeter_length() { return (2 * PI * radius); }
+    int get_area() { return (PI * pow(radius,2));}
 };
 class rectangle : public shape{
   
@@ -27,7 +28,7 @@ class rectangle : public shape{
   public:
     rectangle(int height, int width) : height(height), width(width) {}
     int get_perimeter_length(){ return 2 * (height + width); }
-    int get_area(){             return height * width; }
+    int get_area(){ return (height * width); }
 };
 class square : public shape{
   
@@ -36,7 +37,7 @@ class square : public shape{
   public:
     square(int side) : side(side) { }
     int get_perimeter_length(){ return 4 * side; }
-    int get_area(){             return side^2; }
+    int get_area(){ return pow(side,2); }
 };
 int main(){
   shape *s1;
